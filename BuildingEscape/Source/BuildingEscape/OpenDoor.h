@@ -21,12 +21,9 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-<<<<<<< HEAD
 	void OpenDoor();
 	void CloseDoor();
 
-=======
->>>>>>> parent of d2dfab3... trigger volume Pressure Plate opens door when steeped into.
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -39,7 +36,6 @@ private:
 	UPROPERTY(EditAnywhere)
 		ATriggerVolume* PressurePlate;
 
-<<<<<<< HEAD
 	UPROPERTY(EditAnywhere)
 		float DoorCloseDelay = 1.0f;
 
@@ -47,6 +43,4 @@ private:
 
 	AActor* ActorThatOpens;
 	AActor* Owner; // the owning door.
-=======
->>>>>>> parent of d2dfab3... trigger volume Pressure Plate opens door when steeped into.
 };

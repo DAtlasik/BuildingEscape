@@ -1,7 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "OpenDoor.h"
+#include "Engine/World.h"
 #include "Gameframework/Actor.h"
+#include "GameFramework/PlayerController.h"
 
 
 // Sets default values for this component's properties
@@ -19,7 +21,6 @@ UOpenDoor::UOpenDoor()
 void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
-<<<<<<< HEAD
 	Owner = GetOwner();
 	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 
@@ -28,7 +29,6 @@ void UOpenDoor::BeginPlay()
 void UOpenDoor::OpenDoor()
 {
 	Owner->SetActorRotation(FRotator(0.0f, OpenAngle, 0.0f));
-=======
 
 	// finding the owning Actor
 	AActor* Owner = GetOwner();
@@ -41,7 +41,6 @@ void UOpenDoor::OpenDoor()
 
 	//UE_LOG(LogTemp, Warning, TEXT("%s rotation is %s!"), *Owner, *Rotation);
 
->>>>>>> parent of d2dfab3... trigger volume Pressure Plate opens door when steeped into.
 }
 
 void UOpenDoor::CloseDoor()
@@ -54,7 +53,6 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-<<<<<<< HEAD
 	// Poll the trigger volume
 	if (PressurePlate->IsOverlappingActor(ActorThatOpens)) 
 	{
@@ -70,7 +68,5 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	}
 
 
-=======
 	// ...
->>>>>>> parent of d2dfab3... trigger volume Pressure Plate opens door when steeped into.
 }
